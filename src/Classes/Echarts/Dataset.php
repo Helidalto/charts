@@ -55,6 +55,16 @@ class Dataset extends DatasetClass
         if (in_array(strtolower($this->type), $this->specialDatasets)) {
             return Collection::make($this->values)
                 ->map(function ($value, $key) use ($labels) {
+
+                    if (is_array($value) && array_key_exists('value', $value)) {
+                        // Se o valor já é um array (novo formato com ID)
+                        return [
+                            'name'  => $labels[$key],
+                            'value' => $value['value'],
+                            'id'    => $value['id'] ?? null, // id é opcional
+                        ];
+                    }
+                    // 🎯 Se é o formato padrão (só valor simples)
                     return [
                         'name'  => $labels[$key],
                         'value' => $value,

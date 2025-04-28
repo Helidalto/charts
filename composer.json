@@ -1,6 +1,6 @@
 {
-    "name": "consoletvs/charts",
-    "description": "The laravel charting package",
+    "name": "helidalto/charts",
+    "description": "Meu fork do pacote ConsoleTVs Charts",
     "license": "MIT",
     "type": "library",
     "require": {
@@ -11,8 +11,8 @@
     },
     "authors": [
         {
-            "name": "Èrik Campobadal Forés ",
-            "email": "soc@erik.cat"
+            "name": "Helidalto Gonçalves ",
+            "email": "helidalto@gmail.com"
         }
     ],
     "autoload": {
